@@ -1,0 +1,15 @@
+  <h1><%= @author.name %> Books</h1>
+  <%= link_to "New book", new_book_path(:author_id => @author.id), { :class => "button waves-effect waves-light btn" } %>
+  <br><br>
+
+  <div class="row">
+    <% @books.each do |book| %>
+
+        <div class="card-panel grey lighten-2 col s4" style="margin: 10px">
+        
+          <br>
+          <strong><%= link_to book.title %></strong>
+          <em><%= book.genre %></em>
+        </div>
+    <% end %>
+  </div>
