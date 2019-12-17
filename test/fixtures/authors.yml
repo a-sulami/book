@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  bith_date: MyString
+  country: MyString
+  bith_place: MyString
+
+two:
+  name: MyString
+  bith_date: MyString
+  country: MyString
+  bith_place: MyString
