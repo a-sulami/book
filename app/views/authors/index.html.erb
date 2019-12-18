@@ -1,8 +1,24 @@
+<div class = "container-fluid" style="background-color: black;">
+<ul class="nav nav-pills nav-justified">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Jarir</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/author/new">Create New Author</a>
+  </li>
+ 
+ 
+</ul>
+</div>
+
+<div class = "container">
+
+
 <h1>All The Authors</h1>
 
-<table class="striped bordered">
+<table class="table table-hover striped bordered">
   <tr>
-    <th>Author</th>
+    <th class = "display-3 text-center">Author</th>
     <th>Birth Date</th>
     <th>Country</th>
     <th>Hometown</th>
@@ -16,15 +32,16 @@
         <td><%= author.bith_date%></td>
         <td><%= author.country %></td>
         <td><%= author.bith_place%></td>
+        
                 <td><a class="btn-floating btn-large red" href="<%= edit_author_path(author) %>" >
-           <em class="large material-icons">Edit Author</em>
+           <em class="glyphicon glyphicon-edit"></em>
           </a>
         </td>
-              <!--  <td><a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= author.name %>?" data-method="delete" href="/authors/<%= author.id %>" rel="nofollow"><i class="large material-icons">Delete author</i>
+                <td><a class="glyphicon glyphicon-trash" data-confirm="Are you sure you want to delete <%= author.name %>?" data-method="delete" href="/authors/<%= author.id %>" rel="nofollow"><i class="large material-icons"></i>
     	   </a>
         </td>
 	      
-	                 -->
+	                 
       </tr>
   <% end %>
 </table>
@@ -32,3 +49,5 @@
 <h1>Add an Author</h1>
 <%= link_to "Add an Author", new_author_path, { :class => "button waves-effect waves-light btn" } %>
 <br><br>
+
+</div>
